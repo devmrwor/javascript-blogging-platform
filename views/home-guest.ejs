@@ -60,6 +60,10 @@
     <!-- header ends here -->
 
     <div class="container py-md-5">
+      <% errors.forEach(function(message) { %>
+      <div class="alert alert-danger text-center"><%= message %></div>
+      <% }) %>
+
       <div class="row align-items-center">
         <div class="col-lg-7 py-3 py-md-5">
           <h1 class="display-3">Remember Writing?</h1>
@@ -72,6 +76,10 @@
         </div>
         <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
           <form action="/register" method="POST" id="registration-form">
+            <% regErrors.forEach(function(message) { %>
+            <div class="alert alert-danger small"><%= message %></div>
+            <% }) %>
+
             <div class="form-group">
               <label for="username-register" class="text-muted mb-1"
                 ><small>Username</small></label
