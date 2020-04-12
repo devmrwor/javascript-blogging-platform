@@ -20,5 +20,6 @@ router.post(
   userController.mustBeLoggedIn,
   postController.create
 );
+router.get("/post/:id", postController.viewSingle);
 
 module.exports = router;

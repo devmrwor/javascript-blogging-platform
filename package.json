@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "blogging-platform",
   "version": "1.0.0",
-  "description": "",
+  "description": "A blogging platform using MongoDB Atlas, Express and Node.",
   "main": "app.js",
   "scripts": {
     "watch": "nodemon db",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solygambas/javascript-writing-app.git"
+    "url": "git+https://github.com/solygambas/javascript-blogging-platform.git"
   },
   "author": "solygambas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/solygambas/javascript-writing-app/issues"
+    "url": "https://github.com/solygambas/javascript-blogging-platform/issues"
   },
-  "homepage": "https://github.com/solygambas/javascript-writing-app#readme",
+  "homepage": "https://github.com/solygambas/javascript-blogging-platform#readme",
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
