@@ -7,8 +7,16 @@
     "watch": "nodemon db",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solygambas/javascript-writing-app.git"
+  },
   "author": "solygambas",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solygambas/javascript-writing-app/issues"
+  },
+  "homepage": "https://github.com/solygambas/javascript-writing-app#readme",
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
