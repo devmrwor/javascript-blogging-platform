@@ -16,6 +16,16 @@ app.use(sessionOptions);
 app.use(flash());
 
 app.use(function (req, res, next) {
+  // Make error and success flash messages available for all templates
+  res.locals.errors = req.flash("errors");
+  res.locals.success = req.flash("success");
+  // Make current user id available on the req object
+  if (req.session.user) {
+    req.visitorId = req.session.user._id;
+  } else {
+    req.visitorId = 0;
+  }
+  // Make user session data available for all templates
   res.locals.user = req.session.user;
   next();
 });

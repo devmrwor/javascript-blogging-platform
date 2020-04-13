@@ -1,9 +1,7 @@
 <%- include('includes/header') %>
 
 <div class="container py-md-5">
-  <% errors.forEach(function(message) { %>
-  <div class="alert alert-danger text-center"><%= message %></div>
-  <% }) %>
+  <%- include('includes/flash') %>
 
   <div class="row align-items-center">
     <div class="col-lg-7 py-3 py-md-5">
