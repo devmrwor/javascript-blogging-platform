@@ -2,9 +2,9 @@
 
 A blogging platform using MongoDB Atlas, Express and Node.
 
-## Blog - Core features
+## Core features
 
-- using Model–view–controller (MVC) design pattern.
+- using Model–View–Controller (MVC) design pattern.
 - handling routes with Express.
 - handling views with Embedded JavaScript templates (EJS).
 - validating user data with validator.

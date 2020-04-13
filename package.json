@@ -4,7 +4,7 @@
   "description": "A blogging platform using MongoDB Atlas, Express and Node.",
   "main": "app.js",
   "scripts": {
-    "watch": "nodemon db",
+    "watch": "start nodemon db --ignore frontend-js --ignore public/ && start webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
