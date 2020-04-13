@@ -8,14 +8,18 @@
     <% if (post.isVisitorOwner) { %>
     <span class="pt-2">
       <a
-        href="/post/<%= post._id %>/edit/"
+        href="/post/<%= post._id %>/edit"
         class="text-primary mr-2"
         data-toggle="tooltip"
         data-placement="top"
         title="Edit"
         ><i class="fas fa-edit"></i
       ></a>
-      <form class="delete-post-form d-inline" action="#" method="POST">
+      <form
+        class="delete-post-form d-inline"
+        action="/post/<%= post._id %>/delete"
+        method="POST"
+      >
         <button
           class="delete-post-button text-danger"
           data-toggle="tooltip"
@@ -31,13 +35,16 @@
 
   <p class="text-muted small mb-4">
     <a href="#"><img class="avatar-tiny" src="<%= post.author.avatar %>" /></a>
-    Posted by <a href="#"><%= post.author.username %></a> on <%=
-    post.createdDate.getMonth() + 1 %>/<%= post.createdDate.getDate() %>/<%=
-    post.createdDate.getFullYear() %>
+    Posted by
+    <a href="/profile/<%= post.author.username %>"
+      ><%= post.author.username %></a
+    >
+    on <%= post.createdDate.getMonth() + 1 %>/<%= post.createdDate.getDate()
+    %>/<%= post.createdDate.getFullYear() %>
   </p>
 
   <div class="body-content">
-    <%= post.body %>
+    <%- filterUserHTML(post.body) %>
   </div>
 </div>
 

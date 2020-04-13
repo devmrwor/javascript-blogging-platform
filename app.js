@@ -1,6 +1,8 @@
 const express = require("express");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
+const markdown = require("marked");
+const sanitizeHTML = require("sanitize-html");
 const flash = require("connect-flash");
 const app = express();
 
@@ -16,6 +18,29 @@ app.use(sessionOptions);
 app.use(flash());
 
 app.use(function (req, res, next) {
+  // Make markdown available for all templates
+  res.locals.filterUserHTML = function (content) {
+    return sanitizeHTML(markdown(content), {
+      allowedTags: [
+        "p",
+        "br",
+        "ul",
+        "ol",
+        "li",
+        "strong",
+        "bold",
+        "i",
+        "em",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+      ],
+      allowedAttributes: {},
+    });
+  };
   // Make error and success flash messages available for all templates
   res.locals.errors = req.flash("errors");
   res.locals.success = req.flash("success");
