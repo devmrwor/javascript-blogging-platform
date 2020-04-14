@@ -29,7 +29,11 @@ A blogging platform using MongoDB Atlas, Express and Node.
 
 ## Follow Feature
 
-- to be done.
+- handling follow and unfollow features on author profile.
+- storing followed users in the database.
+- retrieving followers and followed users from the database.
+- counting posts, followers and followed users with await Promise.all() and countDocuments().
+- displaying a feed on the dashboard with the latest posts published by followed users.
 
 ## Live Chat
 
