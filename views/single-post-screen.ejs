@@ -34,7 +34,9 @@
   </div>
 
   <p class="text-muted small mb-4">
-    <a href="#"><img class="avatar-tiny" src="<%= post.author.avatar %>" /></a>
+    <a href="/profile/<%= post.author.username %>"
+      ><img class="avatar-tiny" src="<%= post.author.avatar %>"
+    /></a>
     Posted by
     <a href="/profile/<%= post.author.username %>"
       ><%= post.author.username %></a

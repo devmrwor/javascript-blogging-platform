@@ -1,0 +1,43 @@
+<h2>
+  <img class="avatar-small" src="<%= profileAvatar %>" />
+  <%= profileUsername %> <% if (user && !isVisitorsProfile) { if (isFollowing) {
+  %>
+  <form
+    class="ml-2 d-inline"
+    action="/remove-follow/<%= profileUsername %>"
+    method="POST"
+  >
+    <button class="btn btn-danger btn-sm">
+      Stop Following <i class="fas fa-user-times"></i>
+    </button>
+  </form>
+  <% } else { %>
+  <form
+    class="ml-2 d-inline"
+    action="/add-follow/<%= profileUsername %>"
+    method="POST"
+  >
+    <button class="btn btn-primary btn-sm">
+      Follow <i class="fas fa-user-plus"></i>
+    </button>
+  </form>
+  <% } } %>
+</h2>
+
+<div class="profile-nav nav nav-tabs pt-2 mb-4">
+  <a
+    href="/profile/<%= profileUsername %>"
+    class="profile-nav-link nav-item nav-link active"
+    >Posts: 3</a
+  >
+  <a
+    href="/profile/<%= profileUsername %>/followers"
+    class="profile-nav-link nav-item nav-link"
+    >Followers: 3</a
+  >
+  <a
+    href="/profile/<%= profileUsername %>/following"
+    class="profile-nav-link nav-item nav-link"
+    >Following: 2</a
+  >
+</div>
