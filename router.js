@@ -17,6 +17,18 @@ router.get(
   userController.sharedProfileData,
   userController.profilePostsScreen
 );
+router.get(
+  "/profile/:username/followers",
+  userController.ifUserExists,
+  userController.sharedProfileData,
+  userController.profileFollowersScreen
+);
+router.get(
+  "/profile/:username/following",
+  userController.ifUserExists,
+  userController.sharedProfileData,
+  userController.profileFollowingScreen
+);
 
 // post related routes
 router.get(
