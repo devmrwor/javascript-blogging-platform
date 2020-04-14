@@ -21,7 +21,11 @@ A blogging platform using MongoDB Atlas, Express and Node.
 
 ## Live Search Feature
 
-- to be done.
+- bundling front-end JavaScript with Webpack and Babel.
+- handling key press events with setTimeout().
+- sending search requests to the server with Axios.
+- creating an index in MongoDB Atlas and building a search request to the database.
+- sanitizing results with DOMPurify.
 
 ## Follow Feature
 
