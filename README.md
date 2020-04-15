@@ -45,7 +45,9 @@ A blogging platform using MongoDB Atlas, Express and Node.
 
 ## Live Validation
 
-- to be done.
+- displaying errors on the fly for registration form with regex.
+- checking if username and email are already in the database with Axios.
+- performing a last check before submitting the form.
 
 ## Security
 

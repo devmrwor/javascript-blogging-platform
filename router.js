@@ -9,6 +9,8 @@ router.get("/", userController.home);
 router.post("/register", userController.register);
 router.post("/login", userController.login);
 router.post("/logout", userController.logout);
+router.post("/does-username-exist", userController.doesUsernameExist);
+router.post("/does-email-exist", userController.doesEmailExist);
 
 // profile related routes
 router.get(
