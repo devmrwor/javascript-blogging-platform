@@ -37,7 +37,11 @@ A blogging platform using MongoDB Atlas, Express and Node.
 
 ## Live Chat
 
-- to be done.
+- handling realtime communication between web clients and server with Socket.IO.
+- sending messages with emit() and waiting for messages with on().
+- broadcasting messages with socket.broadcast.emit().
+- displaying usernames and avatars in the live chat with express-session.
+- sanitizing messages with sanitize-html (server-side) and DOMPurify (client-side).
 
 ## Live Validation
 
