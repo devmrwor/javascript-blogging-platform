@@ -52,6 +52,9 @@ A blogging platform using MongoDB Atlas, Express and Node.
 
 ## API
 
-- to be done.
+- granting access to the API with JSON Web Tokens (/api/login).
+- enabling routes for creating (/api/create-post) and deleting posts (/api/post/:id) through the API.
+- enabling public get requests to retrieve posts by author (/api/posts-by-author/:username).
+- handling Cross-origin resource sharing (CORS).
 
 Based on [Learn JavaScript: Full-Stack from Scratch](https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/) by Brad Schiff (2019).

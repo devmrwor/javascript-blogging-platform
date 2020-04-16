@@ -224,3 +224,13 @@ exports.apiMustBeLoggedIn = function (req, res, next) {
     res.json("Sorry, you must provide a valid token.");
   }
 };
+
+exports.apiGetPostsByUsername = async function (req, res) {
+  try {
+    let authorDoc = await User.findByUsername(req.params.username);
+    let posts = await Post.findByAuthorId(authorDoc._id);
+    res.json(posts);
+  } catch {
+    res.json("Sorry, invalid user requested.");
+  }
+};

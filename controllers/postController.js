@@ -113,3 +113,13 @@ exports.apiCreate = function (req, res) {
       res.json(errors);
     });
 };
+
+exports.apiDelete = function (req, res) {
+  Post.delete(req.params.id, req.apiUser._id)
+    .then(() => {
+      res.json("Post successfully deleted.");
+    })
+    .catch(() => {
+      res.json("You do not have permission to perform that action.");
+    });
+};
