@@ -2,6 +2,12 @@
 
 A blogging platform using MongoDB Atlas, Express and Node.
 
+## Demo
+
+[See Demo deployed on Heroku](https://javascript-blogging-platform.herokuapp.com/)
+
+![](screenshot.png)
+
 ## Core features
 
 - using Model–View–Controller (MVC) design pattern.
