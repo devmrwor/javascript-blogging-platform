@@ -23,6 +23,7 @@ A blogging platform using MongoDB Atlas, Express and Node.
 - performing CRUD operations (create, read, update, delete) using MongoDB Atlas for posts.
 - displaying profile with the latest posts published by author.
 - handling markdown in posts with marked.
+- sending email notifications with Sendgrid API.
 - sanitizing data posted by users with sanitize-html.
 - preventing Cross-Site Request Forgery (CSRF) with csurf.
 
