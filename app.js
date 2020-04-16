@@ -4,6 +4,7 @@ const MongoStore = require("connect-mongo")(session);
 const markdown = require("marked");
 const sanitizeHTML = require("sanitize-html");
 const flash = require("connect-flash");
+const csrf = require("csurf");
 const app = express();
 
 let sessionOptions = session({
@@ -64,7 +65,24 @@ app.use(express.static("public"));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
+app.use(csrf());
+app.use(function (req, res, next) {
+  res.locals.csrfToken = req.csrfToken();
+  next();
+});
+
 app.use("/", router);
+
+app.use(function (err, req, res, next) {
+  if (err) {
+    if (err.code == "EBADCSRFTOKEN") {
+      req.flash("errors", "Cross-Site Request Forgery detected.");
+      req.session.save(() => res.redirect("/"));
+    } else {
+      res.render("404", { title: "Page not found" });
+    }
+  }
+});
 
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);

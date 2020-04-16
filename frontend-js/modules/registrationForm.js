@@ -2,6 +2,7 @@ import axios from "axios";
 
 class RegistrationForm {
   constructor() {
+    this._csrf = document.querySelector('[name="_csrf"]').value;
     this.form = document.querySelector("#registration-form");
     this.allFields = document.querySelectorAll(
       "#registration-form .form-control"
@@ -89,7 +90,10 @@ class RegistrationForm {
 
     if (!this.username.errors) {
       axios
-        .post("/does-username-exist", { username: this.username.value })
+        .post("/does-username-exist", {
+          _csrf: this._csrf,
+          username: this.username.value,
+        })
         .then((response) => {
           if (response.data) {
             this.showValidationError(
@@ -122,7 +126,10 @@ class RegistrationForm {
     }
     if (!this.email.errors) {
       axios
-        .post("/does-email-exist", { email: this.email.value })
+        .post("/does-email-exist", {
+          _csrf: this._csrf,
+          email: this.email.value,
+        })
         .then((response) => {
           if (response.data) {
             this.showValidationError(

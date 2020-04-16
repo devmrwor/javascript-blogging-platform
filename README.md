@@ -18,6 +18,7 @@ A blogging platform using MongoDB Atlas, Express and Node.
 - displaying profile with the latest posts published by author.
 - handling markdown in posts with marked.
 - sanitizing data posted by users with sanitize-html.
+- preventing Cross-Site Request Forgery (CSRF) with csurf.
 
 ## Live Search Feature
 
@@ -48,10 +49,6 @@ A blogging platform using MongoDB Atlas, Express and Node.
 - displaying errors on the fly for registration form with regex.
 - checking if username and email are already in the database with Axios.
 - performing a last check before submitting the form.
-
-## Security
-
-- to be done.
 
 ## API
 

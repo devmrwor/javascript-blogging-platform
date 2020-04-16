@@ -80,6 +80,7 @@
             >Create Post</a
           >
           <form action="/logout" method="POST" class="d-inline">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
             <button class="btn btn-sm btn-secondary">Sign Out</button>
           </form>
         </div>
@@ -104,6 +105,7 @@
               />
             </div>
             <div class="col-md-auto">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
               <button class="btn btn-primary btn-sm">Sign In</button>
             </div>
           </div>
