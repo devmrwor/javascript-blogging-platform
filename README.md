@@ -1,6 +1,6 @@
 # Blogging Platform
 
-A blogging platform using MongoDB Atlas, Express and Node.
+A blogging platform using MongoDB Atlas, Express and Node.js.
 
 ## Demo
 
