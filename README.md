@@ -6,7 +6,11 @@ A blogging platform using MongoDB Atlas, Express and Node.js.
 
 [See Demo deployed on Heroku](https://javascript-blogging-platform.herokuapp.com/)
 
-![](screenshot.png)
+<p align="center">
+  <a href="https://javascript-blogging-platform.herokuapp.com/">
+    <img src="screenshot.png" alt="See Demo deployed on Heroku">
+  </a>
+</p>
 
 ## Core features
 
