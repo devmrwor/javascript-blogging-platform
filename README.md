@@ -4,11 +4,11 @@ A blogging platform using MongoDB Atlas, Express and Node.js.
 
 ## Demo
 
-[See Demo deployed on Heroku](https://javascript-blogging-platform.herokuapp.com/)
+[See Demo deployed on Render](https://javascript-blogging-platform.onrender.com/)
 
 <p align="center">
-  <a href="https://javascript-blogging-platform.herokuapp.com/">
-    <img src="screenshot.png" alt="See Demo deployed on Heroku">
+  <a href="https://javascript-blogging-platform.onrender.com/">
+    <img src="screenshot.png" alt="See Demo deployed on Render">
   </a>
 </p>
 
@@ -68,8 +68,8 @@ A blogging platform using MongoDB Atlas, Express and Node.js.
 - enabling public GET requests to retrieve posts by author (/api/posts-by-author/:username).
 - handling Cross-origin resource sharing (CORS).
 
-## Heroku
+## Render
 
-- deploying on Heroku.
+- deploying on Render.
 
 Based on [Learn JavaScript: Full-Stack from Scratch](https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/) by Brad Schiff (2019).

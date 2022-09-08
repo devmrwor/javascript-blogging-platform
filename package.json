@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "watch": "start nodemon db --ignore frontend-js --ignore public/ && start webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node db.js"
   },
   "repository": {
     "type": "git",
